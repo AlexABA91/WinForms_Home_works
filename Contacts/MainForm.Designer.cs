@@ -70,36 +70,36 @@
             // toolStripPlus
             // 
             this.toolStripPlus.Name = "toolStripPlus";
-            this.toolStripPlus.Size = new System.Drawing.Size(173, 22);
-            this.toolStripPlus.Text = "Добавить Контакт";
+            this.toolStripPlus.Size = new System.Drawing.Size(182, 22);
+            this.toolStripPlus.Text = "Добавить Контакт...";
             this.toolStripPlus.Click += new System.EventHandler(this.plus_Click);
             // 
             // toolStripMinus
             // 
             this.toolStripMinus.Name = "toolStripMinus";
-            this.toolStripMinus.Size = new System.Drawing.Size(173, 22);
+            this.toolStripMinus.Size = new System.Drawing.Size(182, 22);
             this.toolStripMinus.Text = "Удалить Контакт";
             this.toolStripMinus.Click += new System.EventHandler(this.minus_Click);
             // 
             // toolStripRewride
             // 
             this.toolStripRewride.Name = "toolStripRewride";
-            this.toolStripRewride.Size = new System.Drawing.Size(173, 22);
-            this.toolStripRewride.Text = "Изменить контакт";
+            this.toolStripRewride.Size = new System.Drawing.Size(182, 22);
+            this.toolStripRewride.Text = "Изменить контакт...";
             this.toolStripRewride.Click += new System.EventHandler(this.rewrite_Click);
             // 
             // toolStripInfo
             // 
             this.toolStripInfo.Name = "toolStripInfo";
-            this.toolStripInfo.Size = new System.Drawing.Size(173, 22);
-            this.toolStripInfo.Text = "Информация";
+            this.toolStripInfo.Size = new System.Drawing.Size(182, 22);
+            this.toolStripInfo.Text = "Информация...";
             this.toolStripInfo.Click += new System.EventHandler(this.Info_Click);
             // 
             // toolStripExit
             // 
             this.toolStripExit.Name = "toolStripExit";
             this.toolStripExit.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.F4)));
-            this.toolStripExit.Size = new System.Drawing.Size(173, 22);
+            this.toolStripExit.Size = new System.Drawing.Size(182, 22);
             this.toolStripExit.Text = "Выход";
             this.toolStripExit.Click += new System.EventHandler(this.toolStripExit_Click);
             // 

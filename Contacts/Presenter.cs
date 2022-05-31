@@ -15,8 +15,7 @@ namespace Contacts {
             mainForm.TransferFromFormToContacts += new EventHandler<EventArgs>(OperationChecker!);
 
             model = _model;
-            model.ModelChange+= new EventHandler<EventArgs>(FromModelToMainForm!);
-            model.ObserverContacts();
+            FromModelToMainForm();
         }
 
         public void FromFormToModel(object sender, EventArgs e) {
@@ -24,8 +23,9 @@ namespace Contacts {
                 mainForm.dialogInfo[3], mainForm.dialogInfo[4], mainForm.dialogInfo[5], mainForm.dialogInfo[6], mainForm.dialogInfo[7]);
             model.NewContact = contact;
             model.Add();
+            FromModelToMainForm();
         }
-        public void FromModelToMainForm(object sender, EventArgs e) {
+        public void FromModelToMainForm() {
             List<string> stringList = new List<string>();
             if (mainForm.ControlValue == (int)operation.minus) {
                 foreach (var item in model.ContactsList) {
@@ -54,13 +54,16 @@ namespace Contacts {
             if (mainForm.ControlValue == (int)operation.minus) {
                 model.CurrentItem = mainForm.CurrentItem;
                 model.Remove();
+                FromModelToMainForm();
             }
             else if (mainForm.ControlValue == (int)operation.redraw ) {
                 model.CurrentItem = mainForm.CurrentItem;
                 model.Change();
+                FromModelToMainForm();
             } else if (mainForm.ControlValue == (int)operation.showInfo)  {
                 model.CurrentItem = mainForm.CurrentItem;
                 model.Info();
+                FromModelToMainForm();
             }
         }
     }

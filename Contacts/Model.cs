@@ -1,6 +1,4 @@
-﻿using System;
-using System.Linq;
-using System.Runtime.Serialization.Json;
+﻿using System.Runtime.Serialization.Json;
 
 namespace Contacts {
     class Model : IModel {
@@ -10,19 +8,16 @@ namespace Contacts {
         public Contact? NewContact { get; set; }
         public string? CurrentItem { get; set; }
 
-        public event EventHandler<EventArgs>? ModelChange;
         public Model() {
             ContactsList = new List<Contact>();
-            paramList = new List<string>();  
-            Load(); 
+            paramList = new List<string>();
+            Load();
         }
-
         public void Add() {
             if (NewContact != null)
                 ContactsList.Add(NewContact);
-                ObserverContacts();
-        }
 
+        }
         public void Change() {
             if (CurrentItem != null && ContactsList != null) {
                 var item = ContactsList.Find(x => x.ToString() == CurrentItem);
@@ -37,7 +32,7 @@ namespace Contacts {
                     paramList.Add(item.HouseNum);
                     paramList.Add(item.Apartment);
                     ContactsList.Remove(item);
-                    ObserverContacts();
+
                 }
             }
         }
@@ -54,23 +49,17 @@ namespace Contacts {
                     paramList.Add(item.Street);
                     paramList.Add(item.HouseNum);
                     paramList.Add(item.Apartment);
-                    ObserverContacts();
+
                 }
             }
         }
-     
-
         public void Remove() {
             if (CurrentItem != null && ContactsList != null) {
                 var item = ContactsList.Find(x => x.ToString() == CurrentItem);
-                if(item != null)
-                ContactsList.Remove(item);
-                ObserverContacts();
-            }
-        }
+                if (item != null)
+                    ContactsList.Remove(item);
 
-        public void ObserverContacts() {
-            ModelChange?.Invoke(this, EventArgs.Empty);
+            }
         }
         public void Save() {
             try {

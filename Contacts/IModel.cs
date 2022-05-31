@@ -8,7 +8,7 @@ namespace Contacts {
         string? CurrentItem { get; set; }
         Contact? NewContact { get; set; }
 
-        event EventHandler<EventArgs> ModelChange;
+       
         
 
         void Add();
@@ -18,6 +18,6 @@ namespace Contacts {
         void Load();
         void Info();
 
-        void ObserverContacts();
+       
     }
 }

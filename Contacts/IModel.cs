@@ -8,9 +8,6 @@ namespace Contacts {
         string? CurrentItem { get; set; }
         Contact? NewContact { get; set; }
 
-       
-        
-
         void Add();
         void Remove();
         void Change();

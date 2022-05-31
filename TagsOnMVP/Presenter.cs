@@ -9,6 +9,7 @@
 
             formViev.MixTransfer += new EventHandler<EventArgs>(Mixin!);
             formViev.FieldButtonClick += new EventHandler<EventArgs>(Move!);
+
             tag.PosChanger += new EventHandler<EventArgs>(PositonChanger!);
 
             inaitialization();

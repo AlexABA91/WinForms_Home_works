@@ -24,7 +24,7 @@ namespace Contacts {
             if(sender as string != "fromRedraw")
             secondDialog = new DialogForm();
             
-            ControlValue = 0; //—броc, на добавление//
+            ControlValue = 0; 
             var resolt = secondDialog?.ShowDialog();
 
             if (resolt == DialogResult.OK) {
